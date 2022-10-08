@@ -1,0 +1,77 @@
+/*
+let ad = "Ali";
+let soyad = "Samur";
+let yas = "16";
+let sehir  = "Adana";
+
+// let mesaj = "Benim adım " + ad + soyad + '. ' + sehir + '\'da yaşıyorum, 18 yaşına girmeme ' + (18 - yas) + "yıl kaldı."
+
+let mesaj = `Benim adım ${ad} ${soyad}. ${sehir}'da yaşıyorum ve 18 yaşına girmeme ${18 - yas} yıl kaldı.`
+
+console.log(mesaj);
+
+let kursAdi = "Komple Uygulamalı Web Geliştirme Eğitimi";
+
+let sonuc;
+
+sonuc = kursAdi.toLowerCase();
+sonuc = kursAdi.toUpperCase();
+sonuc = kursAdi.length;
+sonuc = kursAdi[0];
+sonuc = kursAdi.slice(2)
+sonuc = kursAdi.slice(-15, -1);
+
+sonuc = kursAdi.substring(0, 6);
+sonuc = kursAdi.substring(10);
+
+sonuc = kursAdi.replace("Eğitimi","Kursu")
+sonuc = kursAdi.trim();
+sonuc = kursAdi.trimEnd();
+sonuc = kursAdi.trimStart();
+
+sonuc = kursAdi.indexOf("Komple");
+sonuc = kursAdi.split(" ")
+sonuc = kursAdi.split(" ") [0];
+sonuc = kursAdi.split(" ") [3];
+
+console.log(sonuc);
+*/
+
+//      UYGULAMA
+
+
+let url = "https://www.sadikturan.com";
+let kursAdi = "Komple Web Geliştirme Kursu";
+let sonuc;
+
+// 1- url kaç karakterlidir?
+
+sonuc = url.length;
+
+// 2-kursAdi kaç kelimeden oluşmaktadır?
+
+sonuc = kursAdi.split(" ").length;
+
+// 3- url https ile mi başlıyor?
+
+sonuc = url.startsWith("https");
+
+// 4- kursAdi içerisinde Eğitimi kelimesi var mı?
+
+if (sonuc = kursAdi.indexOf("Eğitimi") > -1) {
+    console.log("evet var");
+} else {
+    console.log("hayır yok");
+}
+
+
+// 5- url ve kursAdi değişkenlerini kullanarak aşağıdaki string bilgiyi oluşturunuz.
+    // https://www.sadikturan.com/komple-web-geliştirme-kursu
+
+kursAdi = kursAdi.toLowerCase();
+kursAdi = kursAdi.replaceAll(" ","-");
+kursAdi = kursAdi.replace("ş","s").replace("ı","i");
+
+
+sonuc = `${url}/${kursAdi}`;
+console.log(sonuc);
